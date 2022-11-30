@@ -8,7 +8,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>WoOx Travel Bootstrap 5 Theme</title>
+    <title>API CityBikes</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +26,6 @@ TemplateMo 580 Woox Travel
 https://templatemo.com/tm-580-woox-travel
 
 -->
-
   </head>
 
 <body>
@@ -86,7 +85,7 @@ https://templatemo.com/tm-580-woox-travel
           <div class="banner-inner-wrapper header-text">
             <div class="main-caption">
               <h2>Take a Glimpse Into The Beautiful Country Of:</h2>
-              <h1>Caribbean</h1>
+              <h1 class="ciudadbanner">Caribbean</h1>
               <div class="border-button"><a href="about.html">Go There</a></div>
             </div>
             <div class="container">
@@ -122,7 +121,7 @@ https://templatemo.com/tm-580-woox-travel
           <div class="banner-inner-wrapper header-text">
             <div class="main-caption">
               <h2>Take a Glimpse Into The Beautiful Country Of:</h2>
-              <h1>Switzerland</h1>
+              <h1 class="ciudadbanner">Switzerland</h1>
               <div class="border-button"><a href="about.html">Go There</a></div>
             </div>
             <div class="container">
@@ -158,7 +157,7 @@ https://templatemo.com/tm-580-woox-travel
           <div class="banner-inner-wrapper header-text">
             <div class="main-caption">
               <h2>Take a Glimpse Into The Beautiful Country Of:</h2>
-              <h1>France</h1>
+              <h1 class="ciudadbanner">France</h1>
               <div class="border-button"><a href="about.html">Go There</a></div>
             </div>
             <div class="container">
@@ -194,7 +193,7 @@ https://templatemo.com/tm-580-woox-travel
           <div class="banner-inner-wrapper header-text">
             <div class="main-caption">
               <h2>Take a Glimpse Into The Beautiful Country Of:</h2>
-              <h1>Thailand</h1>
+              <h1 class="ciudadbanner">Thailand</h1>
               <div class="border-button"><a href="about.html">Go There</a></div>
             </div>
             <div class="container">
@@ -238,7 +237,25 @@ https://templatemo.com/tm-580-woox-travel
     </div>
   </section>
   <!-- ***** Main Banner Area End ***** -->
-  
+  <div class="buscadores">
+    <input type="text" name="buscador" id="buscador" placeholder="Buscar...">
+  </div>
+  <div>
+    <input type="button" value="Buscar" onclick="obtenerNoticias()"/>
+  </div>
+  <div class="busqueda">
+    <h1 class="caja c1">INFORMACION</h1>
+    <h1 class="caja c2">LOCALICAION</h1>
+    <div>Ciudad:</div>
+    <div>Pias:</div>
+    <h2 id="Ciudad" class="caja c3"></h2>
+    <h2 id="Pais" class="caja c4"></h2>
+    <h1 class="caja c5">COORDENADAS</h1>
+    <div>Latitud:</div>
+    <div>Longitud:</div>
+    <h2 id="latitud" class="caja c6"></h2>
+    <h2 id="longitud" class="caja c7"></h2>
+  </div>
   <div class="visit-country">
     <div class="container">
       <div class="row">
@@ -366,8 +383,9 @@ https://templatemo.com/tm-580-woox-travel
       </div>
     </div>
   </div>
-
+  <div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C150.00,150.00 349.21,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #22b3c1;"></path></svg></div>
   <div class="call-to-action">
+    
     <div class="container">
       <div class="row">
         <div class="col-lg-8">
@@ -406,6 +424,7 @@ https://templatemo.com/tm-580-woox-travel
   <script src="assets/js/tabs.js"></script>
   <script src="assets/js/popup.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="assets/js/Api.js"></script>
 
   <script>
     function bannerSwitcher() {
