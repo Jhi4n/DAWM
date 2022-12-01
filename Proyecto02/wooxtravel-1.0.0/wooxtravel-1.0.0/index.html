@@ -239,10 +239,22 @@ https://templatemo.com/tm-580-woox-travel
   <!-- ***** Main Banner Area End ***** -->
   <div class="buscadores">
     <input type="text" name="buscador" id="buscador" placeholder="Buscar...">
+    <input type="button" value="Buscar" onclick="obtenerPais()"/>
   </div>
-  <div>
-    <input type="button" value="Buscar" onclick="obtenerNoticias()"/>
-  </div>
+  <div class="contenedorbusqueda">
+  <div class="contenedordedatos">
+    <table class="tabladedatos">
+        <thead>
+            <tr>
+                <th>Pais</th>
+            </tr>
+        </thead>
+        <tbody class="api" id="tablapais">
+
+        </tbody>
+    </table>
+</div>
+<div id="map"></div>
   <div class="busqueda">
     <h1 class="caja c1">INFORMACION</h1>
     <h1 class="caja c2">LOCALICAION</h1>
@@ -256,6 +268,7 @@ https://templatemo.com/tm-580-woox-travel
     <h2 id="latitud" class="caja c6"></h2>
     <h2 id="longitud" class="caja c7"></h2>
   </div>
+</div>
   <div class="visit-country">
     <div class="container">
       <div class="row">
@@ -425,6 +438,7 @@ https://templatemo.com/tm-580-woox-travel
   <script src="assets/js/popup.js"></script>
   <script src="assets/js/custom.js"></script>
   <script src="assets/js/Api.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
 
   <script>
     function bannerSwitcher() {
